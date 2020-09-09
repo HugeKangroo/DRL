@@ -288,7 +288,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -426,7 +425,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="" ID="ID_394506292" CREATED="1599638224319" MODIFIED="1599638224320">
 <hook NAME="FirstGroupNode"/>
@@ -448,7 +446,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="\latex 符号 $\pi$" ID="ID_371725363" CREATED="1599618819753" MODIFIED="1599618885429"/>
 <node TEXT="\latex $\pi (a|s)$" ID="ID_85101690" CREATED="1599618886968" MODIFIED="1599619530025"><richcontent TYPE="NOTE">
@@ -465,7 +462,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="策略可以是随机的（stochastic）" ID="ID_1894813571" CREATED="1599619024409" MODIFIED="1599619053866">
@@ -500,7 +496,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="状态值函数" ID="ID_723182545" CREATED="1599619262376" MODIFIED="1599621190542"><richcontent TYPE="NOTE">
 
@@ -514,7 +509,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="" ID="ID_517446133" CREATED="1599634020045" MODIFIED="1599634020046">
 <hook NAME="FirstGroupNode"/>
@@ -575,7 +569,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="最优策略" ID="ID_335755433" CREATED="1599638625399" MODIFIED="1599640662848"><richcontent TYPE="NOTE">
 
@@ -589,7 +582,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="最优状态值函数" ID="ID_707030922" CREATED="1599638629151" MODIFIED="1599642267755"><richcontent TYPE="NOTE">
@@ -604,10 +596,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="\latex $v_{*}(s) = \max_{\pi} v_{\pi}(s),\forall s \in S$" FOLDED="true" ID="ID_1378173471" CREATED="1599640465131" MODIFIED="1599640736106">
-<node TEXT="\latex $v_{*}(s) = \max_{a} \sum_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r+\gamma v_{*}(s^{&apos;})]$" ID="ID_903440002" CREATED="1599640971446" MODIFIED="1599640973333"/>
+<node TEXT="\latex $v_{*}(s) = \max \limits _{\pi} v_{\pi}(s),\forall s \in S$" ID="ID_1378173471" CREATED="1599640465131" MODIFIED="1599661136240">
+<node TEXT="\latex $v_{*}(s) = \max \limits_{a} \sum_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r+\gamma v_{*}(s^{&apos;})]$" ID="ID_903440002" CREATED="1599640971446" MODIFIED="1599661173890"/>
 </node>
 </node>
 <node TEXT="最优动作值函数" ID="ID_1219848076" CREATED="1599638639360" MODIFIED="1599639880563"><richcontent TYPE="NOTE">
@@ -622,10 +613,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="\latex $q_{*}(s,a) = \max_{\pi} q_{\pi}(s,a),\forall s \in S, \forall a \in A(s)$" ID="ID_100111224" CREATED="1599640740876" MODIFIED="1599641014578">
-<node TEXT="\latex $q_{*}(s,a) = \sum_{s^{&apos;},r} p(s^{&apos;},r|s,a)[r+\gamma \max_{a^{&apos;}}q_{*}(s^{&apos;},a^{&apos;})]$" ID="ID_860491119" CREATED="1599640980183" MODIFIED="1599641151129"/>
+<node TEXT="\latex $q_{*}(s,a) = \max \limits_{\pi} q_{\pi}(s,a),\forall s \in S, \forall a \in A(s)$" ID="ID_100111224" CREATED="1599640740876" MODIFIED="1599661160635">
+<node TEXT="\latex $q_{*}(s,a) = \sum_{s^{&apos;},r} p(s^{&apos;},r|s,a)[r+\gamma \max \limits_{a^{&apos;}}q_{*}(s^{&apos;},a^{&apos;})]$" ID="ID_860491119" CREATED="1599640980183" MODIFIED="1599661185570"/>
 </node>
 </node>
 <node TEXT="最优动作优势函数" ID="ID_197941689" CREATED="1599638657832" MODIFIED="1599640213192"><richcontent TYPE="NOTE">
@@ -640,7 +630,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
