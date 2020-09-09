@@ -2,8 +2,8 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="强化学习核心" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599394201366" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="0.962">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false"/>
+<hook NAME="MapStyle" zoom="1.874">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="false" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -64,7 +64,7 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="chapter2" FOLDED="true" POSITION="right" ID="ID_689009898" CREATED="1599292904652" MODIFIED="1599394201365">
+<node TEXT="chapter2" POSITION="right" ID="ID_689009898" CREATED="1599292904652" MODIFIED="1599394201365">
 <edge COLOR="#ff0000"/>
 <node TEXT="环境" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
 <node TEXT="\latex $\mathcal{MDP(S,A,T,R,S_\theta,\gamma,H)}$" ID="ID_995816260" CREATED="1599292926252" MODIFIED="1599369640397">
@@ -149,16 +149,21 @@
 </html>
 </richcontent>
 <node TEXT="\latex $r(s,a) = \mathbb{E}[R_t|S_{t-1} = s,A_{t-1} = a]$" ID="ID_165871449" CREATED="1599379060072" MODIFIED="1599379137056"/>
-<node TEXT="\latex $r(s,a,s&apos;) = \mathbb{E}[R_t|S_{t-1} = s,A_{t-1} = a,S_t = s&apos;]$" ID="ID_1593082731" CREATED="1599379168057" MODIFIED="1599379250159"><richcontent TYPE="NOTE">
+<node TEXT="\latex $r(s,a,s&apos;) = \mathbb{E}[R_t|S_{t-1} = s,A_{t-1} = a,S_t = s&apos;]$" ID="ID_1593082731" CREATED="1599379168057" MODIFIED="1599615792351"><richcontent TYPE="NOTE">
 
 <html>
   <head>
     
   </head>
   <body>
-    <p>
-      用转移元组（s,a,s'）来定义奖励函数
-    </p>
+    <ul>
+      <li>
+        用转移元组（s,a,s'）来定义奖励函数
+      </li>
+      <li>
+        当前的reward由前一时刻的s,a决定（也即当前时刻的s,a决定了下一时刻的reward）
+      </li>
+    </ul>
   </body>
 </html>
 </richcontent>
@@ -236,7 +241,7 @@
 <node TEXT="chapter3" POSITION="left" ID="ID_1228608981" CREATED="1599372507484" MODIFIED="1599372512892">
 <edge COLOR="#0000ff"/>
 <node TEXT="智能体决策的目标" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
-<node TEXT="回报(return)最大化" ID="ID_902241639" CREATED="1599374485466" MODIFIED="1599374873226"><richcontent TYPE="NOTE">
+<node TEXT="期望回报(return)最大化" ID="ID_902241639" CREATED="1599374485466" MODIFIED="1599618263134"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -267,12 +272,25 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="\latex $G_t = R_{t+1} + R_{t+2} + R_{t+3} + \cdots + R_{T}$" ID="ID_247571666" CREATED="1599577670081" MODIFIED="1599577870859"/>
 <node TEXT="\latex $G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots + \gamma^{T-1}R_{T}$" ID="ID_1187343680" CREATED="1599577951256" MODIFIED="1599578017166"/>
 <node TEXT="\latex $G_t = \sum \limits_{k=0}^{\infty} \gamma^kR_{t+k+1}$" ID="ID_1841105276" CREATED="1599578025918" MODIFIED="1599578610412"/>
-<node TEXT="\latex $G_t = R_{t+1} + \gamma G_{t+1}$" ID="ID_258900526" CREATED="1599578623019" MODIFIED="1599578672402"/>
+<node TEXT="\latex $G_t = R_{t+1} + \gamma G_{t+1}$" ID="ID_258900526" CREATED="1599578623019" MODIFIED="1599617674815"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      近似估计
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 <node TEXT="期望回报函数" ID="ID_703951743" CREATED="1599393956298" MODIFIED="1599394084753"><richcontent TYPE="NOTE">
 
@@ -286,7 +304,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="" ID="ID_96491054" CREATED="1599577908393" MODIFIED="1599577908395">
@@ -305,12 +322,11 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
 </node>
-<node TEXT="计划(plan)" ID="ID_94743326" CREATED="1599393126259" MODIFIED="1599393203998"><richcontent TYPE="NOTE">
+<node TEXT="一种可以针对所有可能状态的通用计划(plan)" ID="ID_94743326" CREATED="1599393126259" MODIFIED="1599618188836"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -322,7 +338,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="固定的(solid)计划不能应对随机性" ID="ID_1408130643" CREATED="1599393215044" MODIFIED="1599393460302"><richcontent TYPE="NOTE">
 
@@ -336,7 +351,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="策略(policy)" ID="ID_969404007" CREATED="1599393229092" MODIFIED="1599393480206"><richcontent TYPE="NOTE">
@@ -351,7 +365,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="策略包含所有可能的状态" ID="ID_185790774" CREATED="1599393365676" MODIFIED="1599393428029"><richcontent TYPE="NOTE">
 
@@ -365,7 +378,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="策略可能是随机或者确定性的" ID="ID_96452346" CREATED="1599393366277" MODIFIED="1599393564527">
@@ -381,7 +393,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="根据状态(或者观测)计算单个动作" ID="ID_656241539" CREATED="1599393558085" MODIFIED="1599393616866"><richcontent TYPE="NOTE">
@@ -396,10 +407,128 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="自动发现最优策略的方法" ID="ID_1578352997" CREATED="1599618087876" MODIFIED="1599618447317"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      因为最优策略不是那么容易就能被找到的
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="策略" ID="ID_378859418" CREATED="1599618463522" MODIFIED="1599618726325"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        对于一个环境可能有一组策略或者多组策略
+      </li>
+      <li>
+        可能有多组最优策略
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="\latex 符号 $\pi$" ID="ID_371725363" CREATED="1599618819753" MODIFIED="1599618885429"/>
+<node TEXT="\latex $\pi (a|s)$" ID="ID_85101690" CREATED="1599618886968" MODIFIED="1599619530025"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        策略是一个规定了在给定环境的非终止状态下采取行动的函数
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="策略可以是随机的（stochastic）" ID="ID_1894813571" CREATED="1599619024409" MODIFIED="1599619053866">
+<node TEXT="生成行动（actions）的概率分布" ID="ID_670864592" CREATED="1599619125322" MODIFIED="1599619144851"/>
+</node>
+<node TEXT="策略可以是确定的（deterministic）" FOLDED="true" ID="ID_1399799549" CREATED="1599619054479" MODIFIED="1599619082746">
+<node TEXT="直接生成行动（action）" ID="ID_320171718" CREATED="1599619095232" MODIFIED="1599619120865"/>
+</node>
+<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1599619603048">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1789584920" STARTINCLINATION="43;0;" ENDINCLINATION="43;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+</node>
+<node TEXT="多种值函数(value function)" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599619358683"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        保持对回报估计的持续追踪（不断计算回报估计）
+      </li>
+      <li>
+        一个MDP只有一个最优值函数；但通常来说会有多个值函数。（多个值函数中只有一个最优）
+      </li>
+      <li>
+        <font color="#ff0000">值函数和策略的关系：值函数量化了策略的好坏</font>
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="状态值函数" ID="ID_723182545" CREATED="1599619262376" MODIFIED="1599621190542"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      在给定策略下量化状态，来比较策略的好坏: 给定策略和MDP，计算从开始状态到结束状态的<font color="#ff0000"><b>期望回报</b>&nbsp;</font>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="" ID="ID_517446133" CREATED="1599634020045" MODIFIED="1599634020046">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="\latex $v_\pi(s) = \mathbb{E}_\pi [G_t|S_t = s]$" ID="ID_1404682817" CREATED="1599621025665" MODIFIED="1599621286609"/>
+<node TEXT="\latex $v_\pi(s) = \mathbb{E}_\pi [R_{t+1} + \gamma R_{t+2} + \gamma ^2 R_{t+3} + \cdots| S_t=s]$" ID="ID_278646447" CREATED="1599633443054" MODIFIED="1599633537492"/>
+<node TEXT="\latex $v_\pi(s) = \mathbb{E}_\pi [R_{t+1} + \gamma G_{t+1}| S_t=s]$" ID="ID_1146148102" CREATED="1599633560736" MODIFIED="1599633594547"/>
+<node TEXT="\latex $v_\pi(s) = \sum \limits_{a} \pi(a|s) \sum \limits_{s^{&apos;},r} p(s^{&apos;},r|s,a)[r + \gamma v_\pi(s^{&apos;})],\forall s \in S$" ID="ID_1986645824" CREATED="1599633731254" MODIFIED="1599633968652"/>
+<node TEXT="" ID="ID_1333962413" CREATED="1599634020042" MODIFIED="1599634020045">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="state-value function" ID="ID_1662309384" CREATED="1599634020047" MODIFIED="1599634029586"/>
+<node TEXT="V-function" ID="ID_1764406864" CREATED="1599634029836" MODIFIED="1599634033874"/>
+<node TEXT="value function" ID="ID_1421059467" CREATED="1599634034940" MODIFIED="1599634037947"/>
+</node>
+</node>
+<node TEXT="动作值函数" ID="ID_1686637684" CREATED="1599619267683" MODIFIED="1599619280691">
+<node TEXT="\latex $q_\pi(s,a) = \mathbb{E}_\pi[G_t|s_t = s,A_t = a]$" ID="ID_925158542" CREATED="1599634053621" MODIFIED="1599634141861"/>
+<node TEXT="\latex $q_\pi(s,a) = \mathbb{E}_\pi[R_{t+1}+\gamma G_{t+1}|s_t = s,A_t = a]$" ID="ID_1754943848" CREATED="1599634153463" MODIFIED="1599635954958"/>
+</node>
+<node TEXT="动作优势函数" ID="ID_504101944" CREATED="1599619281196" MODIFIED="1599619294405"/>
 </node>
 </node>
 </node>
