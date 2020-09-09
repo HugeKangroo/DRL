@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="强化学习核心" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599394201366" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.874">
+<hook NAME="MapStyle" zoom="1.059">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="false" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -66,7 +66,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="chapter2" POSITION="right" ID="ID_689009898" CREATED="1599292904652" MODIFIED="1599394201365">
 <edge COLOR="#ff0000"/>
-<node TEXT="环境" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
+<node TEXT="环境" FOLDED="true" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
 <node TEXT="\latex $\mathcal{MDP(S,A,T,R,S_\theta,\gamma,H)}$" ID="ID_995816260" CREATED="1599292926252" MODIFIED="1599369640397">
 <node TEXT="\latex $S$ 状态" ID="ID_1703633519" CREATED="1599293058037" MODIFIED="1599371739566"><richcontent TYPE="NOTE">
 
@@ -353,7 +353,9 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="策略(policy)" ID="ID_969404007" CREATED="1599393229092" MODIFIED="1599393480206"><richcontent TYPE="NOTE">
+<node TEXT="策略(policy)" ID="ID_969404007" CREATED="1599393229092" MODIFIED="1599638426232">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_378859418" STARTINCLINATION="165;0;" ENDINCLINATION="165;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -426,7 +428,10 @@
 </html>
 
 </richcontent>
-<node TEXT="策略" ID="ID_378859418" CREATED="1599618463522" MODIFIED="1599618726325"><richcontent TYPE="NOTE">
+<node TEXT="" ID="ID_394506292" CREATED="1599638224319" MODIFIED="1599638224320">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="策略" LOCALIZED_STYLE_REF="styles.important" ID="ID_378859418" CREATED="1599618463522" MODIFIED="1599638395526" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -473,7 +478,9 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1789584920" STARTINCLINATION="43;0;" ENDINCLINATION="43;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
-<node TEXT="多种值函数(value function)" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599619358683"><richcontent TYPE="NOTE">
+<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" FOLDED="true" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599638385297" BACKGROUND_COLOR="#ff0000">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_935275475" STARTINCLINATION="72;0;" ENDINCLINATION="72;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -522,13 +529,120 @@
 <node TEXT="state-value function" ID="ID_1662309384" CREATED="1599634020047" MODIFIED="1599634029586"/>
 <node TEXT="V-function" ID="ID_1764406864" CREATED="1599634029836" MODIFIED="1599634033874"/>
 <node TEXT="value function" ID="ID_1421059467" CREATED="1599634034940" MODIFIED="1599634037947"/>
+<node TEXT="\latex V^\pi(s,a)" ID="ID_1247541453" CREATED="1599637575765" MODIFIED="1599637587241"/>
 </node>
 </node>
 <node TEXT="动作值函数" ID="ID_1686637684" CREATED="1599619267683" MODIFIED="1599619280691">
+<node TEXT="" ID="ID_1588260198" CREATED="1599636933441" MODIFIED="1599636933443">
+<hook NAME="FirstGroupNode"/>
+</node>
 <node TEXT="\latex $q_\pi(s,a) = \mathbb{E}_\pi[G_t|s_t = s,A_t = a]$" ID="ID_925158542" CREATED="1599634053621" MODIFIED="1599634141861"/>
 <node TEXT="\latex $q_\pi(s,a) = \mathbb{E}_\pi[R_{t+1}+\gamma G_{t+1}|s_t = s,A_t = a]$" ID="ID_1754943848" CREATED="1599634153463" MODIFIED="1599635954958"/>
+<node TEXT="\latex $q_\pi(s,a) = \sum _{s^{&apos;},r}p(s^{&apos;},r| s,a)[r + \gamma v_\pi(s^{&apos;})],\forall s \in S, \forall a \in A(s)$" ID="ID_1941240912" CREATED="1599636750581" MODIFIED="1599636913075"/>
+<node TEXT="" ID="ID_1649953424" CREATED="1599636933439" MODIFIED="1599636933441">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="action-value function" ID="ID_903913626" CREATED="1599636933444" MODIFIED="1599636938265"/>
+<node TEXT="Q-function" ID="ID_1630231115" CREATED="1599636938417" MODIFIED="1599636942144"/>
+<node TEXT="\latex $Q^\pi(s,a)$" ID="ID_1903445332" CREATED="1599637560085" MODIFIED="1599637572531"/>
 </node>
-<node TEXT="动作优势函数" ID="ID_504101944" CREATED="1599619281196" MODIFIED="1599619294405"/>
+</node>
+<node TEXT="动作优势函数" ID="ID_504101944" CREATED="1599619281196" MODIFIED="1599619294405">
+<node TEXT="\latex $a_{\pi}(s,a) = q_\pi(s,a)-v_\pi(s)$" ID="ID_1414076740" CREATED="1599636973787" MODIFIED="1599637015816">
+<node TEXT="advantage function" ID="ID_614973777" CREATED="1599637641085" MODIFIED="1599637646922"/>
+<node TEXT="action-advantage function" ID="ID_682782530" CREATED="1599637675136" MODIFIED="1599637685066"/>
+<node TEXT="A-function" ID="ID_1152795936" CREATED="1599637708863" MODIFIED="1599637711420"/>
+<node TEXT="\latex $A^\pi(s,a)$" ID="ID_1960745800" CREATED="1599637702373" MODIFIED="1599637703836"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_573901505" CREATED="1599638224317" MODIFIED="1599638224319">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="策略, 状态值函数, 动作值函数, 动作优势函数都是被用来描述，评估和优化行为的组件。" ID="ID_1346745268" CREATED="1599638224320" MODIFIED="1599638485626">
+<icon BUILTIN="bookmark"/>
+</node>
+</node>
+<node TEXT="最优（Optimality）" ID="ID_935275475" CREATED="1599637832079" MODIFIED="1599642744757"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      当策略，状态值函数，动作值函数和动作优势函数都是他们所能达到的最好的时候，称为最优
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="最优策略" ID="ID_335755433" CREATED="1599638625399" MODIFIED="1599640662848"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      该策略的每个状态的期望回报大于或者等于其他状态的期望回报
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="最优状态值函数" ID="ID_707030922" CREATED="1599638629151" MODIFIED="1599642267755"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      某个状态值函数在每个策略中的所有状态下都取得最大值。
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="\latex $v_{*}(s) = \max_{\pi} v_{\pi}(s),\forall s \in S$" FOLDED="true" ID="ID_1378173471" CREATED="1599640465131" MODIFIED="1599640736106">
+<node TEXT="\latex $v_{*}(s) = \max_{a} \sum_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r+\gamma v_{*}(s^{&apos;})]$" ID="ID_903440002" CREATED="1599640971446" MODIFIED="1599640973333"/>
+</node>
+</node>
+<node TEXT="最优动作值函数" ID="ID_1219848076" CREATED="1599638639360" MODIFIED="1599639880563"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      某个动作值函数在所有策略的所有[状态，动作]对中都有最大值
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="\latex $q_{*}(s,a) = \max_{\pi} q_{\pi}(s,a),\forall s \in S, \forall a \in A(s)$" ID="ID_100111224" CREATED="1599640740876" MODIFIED="1599641014578">
+<node TEXT="\latex $q_{*}(s,a) = \sum_{s^{&apos;},r} p(s^{&apos;},r|s,a)[r+\gamma \max_{a^{&apos;}}q_{*}(s^{&apos;},a^{&apos;})]$" ID="ID_860491119" CREATED="1599640980183" MODIFIED="1599641151129"/>
+</node>
+</node>
+<node TEXT="最优动作优势函数" ID="ID_197941689" CREATED="1599638657832" MODIFIED="1599640213192"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      某个动作优势函数在所有的[状态，动作]对中，等于或者小于0。（因为没有动作可以从<b><font color="#ff0000">最优状态值函数</font></b>中取得优势）
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 </node>
