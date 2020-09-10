@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="强化学习核心" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599394201366" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.059">
+<hook NAME="MapStyle" zoom="0.657">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="false" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -425,7 +425,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="策略" LOCALIZED_STYLE_REF="styles.important" ID="ID_378859418" CREATED="1599618463522" MODIFIED="1599638395526" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
@@ -494,7 +493,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="" ID="ID_1094663633" CREATED="1599706163735" MODIFIED="1599706163735">
 <hook NAME="FirstGroupNode"/>
@@ -540,7 +538,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="" ID="ID_1588260198" CREATED="1599636933441" MODIFIED="1599636933443">
 <hook NAME="FirstGroupNode"/>
@@ -576,7 +573,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="\latex $a_{\pi}(s,a) = q_\pi(s,a)-v_\pi(s)$" ID="ID_1414076740" CREATED="1599636973787" MODIFIED="1599637015816">
 <node TEXT="advantage function" ID="ID_614973777" CREATED="1599637641085" MODIFIED="1599637646922"/>
@@ -602,7 +598,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -702,7 +697,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="策略估计:对政策评分" ID="ID_1643704959" CREATED="1599706557695" MODIFIED="1599707042516"><richcontent TYPE="NOTE">
 
@@ -721,9 +715,8 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="迭代策略评估算法(iterative policy evalution)" ID="ID_1451018919" CREATED="1599706862714" MODIFIED="1599707029303"><richcontent TYPE="NOTE">
+<node TEXT="迭代策略评估方法(iterative policy evalution)" ID="ID_1451018919" CREATED="1599706862714" MODIFIED="1599727627258"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -735,7 +728,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="过程" ID="ID_512610733" CREATED="1599708943703" MODIFIED="1599708946348">
 <node TEXT="" ID="ID_41771409" CREATED="1599707219328" MODIFIED="1599707219329">
@@ -747,7 +739,7 @@
 <node TEXT="迭代的优化估计" ID="ID_1146417755" CREATED="1599707099685" MODIFIED="1599707137145">
 <icon BUILTIN="full-2"/>
 </node>
-<node TEXT="\latex $v_{k+1}(s) = \sum \limits_{a} \pi(a|s) \sum \limits_ {s^{&apos;},r} p(s^{&apos;},r,|s,a)[r + \gamma v_{k}(s^{&apos;})]$" ID="ID_1422984821" CREATED="1599707420640" MODIFIED="1599716120646"><richcontent TYPE="NOTE">
+<node TEXT="\latex $v_{k+1}(s) = \sum \limits_{a} \pi(a|s) \sum \limits_ {s^{&apos;},r} p(s^{&apos;},r,|s,a)[r + \gamma v_{k}(s^{&apos;})]$" ID="ID_1422984821" CREATED="1599707420640" MODIFIED="1599729447230" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -762,19 +754,29 @@
         当策略是确定性策略时，π（a|s）= 1<br/>
       </li>
       <li>
-        <font color="#ff0000"><b>这种从一个估计计算另一个估计的方法被称为自举法</b></font>
-      </li>
-      <li>
-        <font color="#ff0000"><b>k是迭代次数而不是交互次数</b></font>
-      </li>
-      <li>
         不具有agent结束eposides，选择动作和观测环境；也不具有time steps
       </li>
     </ul>
   </body>
 </html>
-
 </richcontent>
+<node TEXT="这种从一个估计计算另一个估计的方法被称为自举法" ID="ID_1286060725" CREATED="1599722157137" MODIFIED="1599722186220" COLOR="#ff0000"/>
+<node TEXT="k是迭代次数而不是交互次数" ID="ID_1395879537" CREATED="1599722178660" MODIFIED="1599722186221" COLOR="#ff0000"/>
+<node TEXT="\latex $v_0(s)$除了非终止状态之外的值随机初始化，终止状态的状态值为0" ID="ID_1091778289" CREATED="1599722196700" MODIFIED="1599722280197" COLOR="#ff0000"/>
+<node TEXT="对比起点的状态值反映了整个策略的好坏" ID="ID_512374087" CREATED="1599722676650" MODIFIED="1599723505744" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      起点的状态值反映了当运行多个回合之后，该问题中这个策略的累计期望奖励，。
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node TEXT="" ID="ID_266293384" CREATED="1599707219325" MODIFIED="1599707219327">
 <hook NAME="SummaryNode"/>
@@ -796,9 +798,92 @@
     </ul>
   </body>
 </html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="策略提升:用评分来提高策略" ID="ID_562316245" CREATED="1599722494743" MODIFIED="1599723831033"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      虽然能够随机生成多个策略再评估多个策略并将他们排序，但是不能保证获取到最优策略。
+    </p>
+    <ol>
+      <li>
+        浪费计算资源
+      </li>
+      <li>
+        不能保证取得最优策略
+      </li>
+    </ol>
+    <p>
+      用Q函数来解决这个问题：
+    </p>
+    <p>
+      通过V函数和MDP可以获得Q函数的估计，Q函数可以窥见所有状态所有动作的值，这些值反映了如何取提高策略（什么状态下取用什么动作更好）。
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="策略优化方法(policy improvement)" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599727659397">
+<node TEXT="过程" ID="ID_494782838" CREATED="1599727665269" MODIFIED="1599727675342">
+<node TEXT="利用状态值函数和MDP计算计算动作值函数" ID="ID_1199575247" CREATED="1599727679741" MODIFIED="1599727720915">
+<icon BUILTIN="full-1"/>
+</node>
+<node TEXT="贪婪策略(greedy policy)" ID="ID_1677719690" CREATED="1599727722031" MODIFIED="1599728169902">
+<icon BUILTIN="full-2"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        选取关于动作值函数值最大的动作(acting greedily),来提高原有策略（<font color="#ff0000"><b>返回一个关于原策略的动作值函数的贪婪策略</b></font>）
+      </li>
+    </ul>
+  </body>
+</html>
 
 </richcontent>
 </node>
+<node TEXT="\latex $\pi^{&apos;}(s) = {argmax} \limits_{a} \sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$" ID="ID_635626764" CREATED="1599728339765" MODIFIED="1599729452879" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      策略提升等式（policy improvement equation）
+    </p>
+    <ol>
+      <li>
+        <p>
+          使用状态值函数和MDP构建one-step lookahead
+        </p>
+      </li>
+      <li>
+        <p>
+          通过最大的值决定动作
+        </p>
+      </li>
+    </ol>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="\latex ${argmax} \limits_{a}$通过采用最大值的action来获取新策略" ID="ID_1354221253" CREATED="1599729229993" MODIFIED="1599729298161"/>
+<node TEXT="\latex $\sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$ 对每个动作，计算所有可能的下一个状态的奖励和状态值的加权和" ID="ID_799940191" CREATED="1599729321979" MODIFIED="1599729434700"/>
 </node>
 </node>
 </node>
