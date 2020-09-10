@@ -413,7 +413,7 @@
 </node>
 </node>
 </node>
-<node TEXT="自动发现最优策略的方法" ID="ID_1578352997" CREATED="1599618087876" MODIFIED="1599618447317"><richcontent TYPE="NOTE">
+<node TEXT="自动发现最优策略的方法" ID="ID_1578352997" CREATED="1599618087876" MODIFIED="1599706716035"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -421,14 +421,12 @@
   </head>
   <body>
     <p>
-      因为最优策略不是那么容易就能被找到的
+      因为最优策略不是那么容易就能被找到的，需要比较和量化不同策略的好坏
     </p>
   </body>
 </html>
+
 </richcontent>
-<node TEXT="" ID="ID_394506292" CREATED="1599638224319" MODIFIED="1599638224320">
-<hook NAME="FirstGroupNode"/>
-</node>
 <node TEXT="策略" LOCALIZED_STYLE_REF="styles.important" ID="ID_378859418" CREATED="1599618463522" MODIFIED="1599638395526" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
@@ -470,11 +468,11 @@
 <node TEXT="策略可以是确定的（deterministic）" FOLDED="true" ID="ID_1399799549" CREATED="1599619054479" MODIFIED="1599619082746">
 <node TEXT="直接生成行动（action）" ID="ID_320171718" CREATED="1599619095232" MODIFIED="1599619120865"/>
 </node>
-<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1599619603048">
+<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1599707347269" BACKGROUND_COLOR="#00ffff">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1789584920" STARTINCLINATION="43;0;" ENDINCLINATION="43;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
-<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" FOLDED="true" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599638385297" BACKGROUND_COLOR="#ff0000">
+<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599706304005" BACKGROUND_COLOR="#ff0000">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_935275475" STARTINCLINATION="72;0;" ENDINCLINATION="72;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE">
 
@@ -491,13 +489,17 @@
         一个MDP只有一个最优值函数；但通常来说会有多个值函数。（多个值函数中只有一个最优）
       </li>
       <li>
-        <font color="#ff0000">值函数和策略的关系：值函数量化了策略的好坏</font>
+        <font color="#ff0000">值函数和策略的关系：这些值函数量化了策略的好坏</font>
       </li>
     </ul>
   </body>
 </html>
+
 </richcontent>
-<node TEXT="状态值函数" ID="ID_723182545" CREATED="1599619262376" MODIFIED="1599621190542"><richcontent TYPE="NOTE">
+<node TEXT="" ID="ID_1094663633" CREATED="1599706163735" MODIFIED="1599706163735">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="状态值函数" FOLDED="true" ID="ID_723182545" CREATED="1599619262376" MODIFIED="1599621190542"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -526,7 +528,20 @@
 <node TEXT="\latex V^\pi(s,a)" ID="ID_1247541453" CREATED="1599637575765" MODIFIED="1599637587241"/>
 </node>
 </node>
-<node TEXT="动作值函数" ID="ID_1686637684" CREATED="1599619267683" MODIFIED="1599619280691">
+<node TEXT="动作值函数" FOLDED="true" ID="ID_1686637684" CREATED="1599619267683" MODIFIED="1599703351806"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      比较相同的策略和当前s下，不同action的价值
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="" ID="ID_1588260198" CREATED="1599636933441" MODIFIED="1599636933443">
 <hook NAME="FirstGroupNode"/>
 </node>
@@ -541,7 +556,28 @@
 <node TEXT="\latex $Q^\pi(s,a)$" ID="ID_1903445332" CREATED="1599637560085" MODIFIED="1599637572531"/>
 </node>
 </node>
-<node TEXT="动作优势函数" ID="ID_504101944" CREATED="1599619281196" MODIFIED="1599619294405">
+<node TEXT="动作优势函数" ID="ID_504101944" CREATED="1599619281196" MODIFIED="1599703915224"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        采取行动a，而不是完全遵从π能获得的优势（简单的说，就是选择动作a和策略默认动作的差值）
+      </li>
+      <li>
+        描述了当前策略和状态下，执行动作a(之后仍按照策略行动)的价值和按照原来策略行动的价值差。（表述了当前状态下，a动作和默认策略动作相比可以带来的优势）
+      </li>
+      <li>
+        从而优化策略
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
 <node TEXT="\latex $a_{\pi}(s,a) = q_\pi(s,a)-v_\pi(s)$" ID="ID_1414076740" CREATED="1599636973787" MODIFIED="1599637015816">
 <node TEXT="advantage function" ID="ID_614973777" CREATED="1599637641085" MODIFIED="1599637646922"/>
 <node TEXT="action-advantage function" ID="ID_682782530" CREATED="1599637675136" MODIFIED="1599637685066"/>
@@ -549,15 +585,28 @@
 <node TEXT="\latex $A^\pi(s,a)$" ID="ID_1960745800" CREATED="1599637702373" MODIFIED="1599637703836"/>
 </node>
 </node>
-</node>
-<node TEXT="" ID="ID_573901505" CREATED="1599638224317" MODIFIED="1599638224319">
+<node TEXT="" ID="ID_616079383" CREATED="1599706163732" MODIFIED="1599706163734">
 <hook NAME="SummaryNode"/>
 <hook NAME="AlwaysUnfoldedNode"/>
-<node TEXT="策略, 状态值函数, 动作值函数, 动作优势函数都是被用来描述，评估和优化行为的组件。" ID="ID_1346745268" CREATED="1599638224320" MODIFIED="1599638485626">
-<icon BUILTIN="bookmark"/>
+<node TEXT="策略, 状态值函数, 动作值函数, 动作优势函数都是被用来描述，评估和优化行为的组件。" ID="ID_1982091149" CREATED="1599706163735" MODIFIED="1599706247596"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        衡量策略的好坏
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
 </node>
 </node>
-<node TEXT="最优（Optimality）" ID="ID_935275475" CREATED="1599637832079" MODIFIED="1599642744757"><richcontent TYPE="NOTE">
+<node TEXT="最优（Optimality）" LOCALIZED_STYLE_REF="styles.important" ID="ID_935275475" CREATED="1599637832079" MODIFIED="1599703178919" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -631,6 +680,126 @@
   </body>
 </html>
 </richcontent>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="规划最优动作序列" ID="ID_1116885467" CREATED="1599706387013" MODIFIED="1599706545410"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        根据多种值函数估计当前策略（将不同的策略转换到多种值函数，来量化其好坏）
+      </li>
+      <li>
+        计算和查找最优值函数,继而获得最优策略
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="策略估计:对政策评分" ID="ID_1643704959" CREATED="1599706557695" MODIFIED="1599707042516"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        policy evaluation: Rating policies
+      </li>
+      <li>
+        当策略π中所有状态下的期望回报值大于或者等于策略π‘中对应状态的期望回报值，策略π好于π‘
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="迭代策略评估算法(iterative policy evalution)" ID="ID_1451018919" CREATED="1599706862714" MODIFIED="1599707029303"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      又被称为策略评估算法(policy evaluation)
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="过程" ID="ID_512610733" CREATED="1599708943703" MODIFIED="1599708946348">
+<node TEXT="" ID="ID_41771409" CREATED="1599707219328" MODIFIED="1599707219329">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="通过扫荡所有的状态，计算给定策略的V函数" ID="ID_1526648067" CREATED="1599707061811" MODIFIED="1599707176053">
+<icon BUILTIN="full-1"/>
+</node>
+<node TEXT="迭代的优化估计" ID="ID_1146417755" CREATED="1599707099685" MODIFIED="1599707137145">
+<icon BUILTIN="full-2"/>
+</node>
+<node TEXT="\latex $v_{k+1}(s) = \sum \limits_{a} \pi(a|s) \sum \limits_ {s^{&apos;},r} p(s^{&apos;},r,|s,a)[r + \gamma v_{k}(s^{&apos;})]$" ID="ID_1422984821" CREATED="1599707420640" MODIFIED="1599716120646"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ul>
+      <li>
+        当k接近无穷的时候算法收敛
+      </li>
+      <li>
+        当策略是确定性策略时，π（a|s）= 1<br/>
+      </li>
+      <li>
+        <font color="#ff0000"><b>这种从一个估计计算另一个估计的方法被称为自举法</b></font>
+      </li>
+      <li>
+        <font color="#ff0000"><b>k是迭代次数而不是交互次数</b></font>
+      </li>
+      <li>
+        不具有agent结束eposides，选择动作和观测环境；也不具有time steps
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="" ID="ID_266293384" CREATED="1599707219325" MODIFIED="1599707219327">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="将这种输入为策略，输出为一个值函数的算法，作为一种解决预测问题的算法。计算一个预定策略的值" ID="ID_354755478" CREATED="1599707219329" MODIFIED="1599707700736" BACKGROUND_COLOR="#00ff66"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We refer to the type of algorithm that takes in a policy and outputs a value function as an algorithm that solves the prediction problem; calculating the values of a pre-determined policy. 
+    </p>
+    <ul>
+      <li>
+        值函数--&gt; 状态值函数
+      </li>
+    </ul>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 </node>
 </node>
 </node>
