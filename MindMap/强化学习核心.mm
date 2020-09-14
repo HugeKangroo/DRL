@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="强化学习核心" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599394201366" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="0.657">
+<hook NAME="MapStyle" zoom="1.41">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="false" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="7" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="chapter2" POSITION="right" ID="ID_689009898" CREATED="1599292904652" MODIFIED="1599394201365">
 <edge COLOR="#ff0000"/>
 <node TEXT="环境" FOLDED="true" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
@@ -238,9 +238,21 @@
 </node>
 </node>
 </node>
+<node TEXT="chapter4" POSITION="right" ID="ID_144543183" CREATED="1600047652158" MODIFIED="1600047656509">
+<edge COLOR="#00ffff"/>
+<node TEXT="探索和利用(exploration and exploitation)" ID="ID_224884469" CREATED="1600047657990" MODIFIED="1600047721949"/>
+</node>
+<node TEXT="chapter1" POSITION="left" ID="ID_1125936534" CREATED="1600047749712" MODIFIED="1600047754949">
+<edge COLOR="#7c0000"/>
+<node TEXT="从反馈中学习" ID="ID_342820960" CREATED="1600047774504" MODIFIED="1600047780673">
+<node TEXT="顺序(sequential) vs. oneshot" ID="ID_1500119820" CREATED="1600047784496" MODIFIED="1600047860598"/>
+<node TEXT="估计(evaluative) vs. supervised" ID="ID_1662274520" CREATED="1600047800728" MODIFIED="1600047898911"/>
+<node TEXT="采样(sampled) vs. exhaustive" ID="ID_414084711" CREATED="1600047899424" MODIFIED="1600047922768"/>
+</node>
+</node>
 <node TEXT="chapter3" POSITION="left" ID="ID_1228608981" CREATED="1599372507484" MODIFIED="1599372512892">
 <edge COLOR="#0000ff"/>
-<node TEXT="智能体决策的目标" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
+<node TEXT="智能体决策的目标" FOLDED="true" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
 <node TEXT="期望回报(return)最大化" ID="ID_902241639" CREATED="1599374485466" MODIFIED="1599618263134"><richcontent TYPE="NOTE">
 
 <html>
@@ -352,7 +364,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="策略(policy)" ID="ID_969404007" CREATED="1599393229092" MODIFIED="1599638426232">
+<node TEXT="策略(policy)" ID="ID_969404007" CREATED="1599393229092" MODIFIED="1600047772091">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_378859418" STARTINCLINATION="165;0;" ENDINCLINATION="165;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE">
 
@@ -467,11 +479,11 @@
 <node TEXT="策略可以是确定的（deterministic）" FOLDED="true" ID="ID_1399799549" CREATED="1599619054479" MODIFIED="1599619082746">
 <node TEXT="直接生成行动（action）" ID="ID_320171718" CREATED="1599619095232" MODIFIED="1599619120865"/>
 </node>
-<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1599707347269" BACKGROUND_COLOR="#00ffff">
+<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1600047772091" BACKGROUND_COLOR="#00ffff">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1789584920" STARTINCLINATION="43;0;" ENDINCLINATION="43;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
-<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599706304005" BACKGROUND_COLOR="#ff0000">
+<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1600047772091" BACKGROUND_COLOR="#ff0000">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_935275475" STARTINCLINATION="72;0;" ENDINCLINATION="72;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE">
 
@@ -680,7 +692,7 @@
 </node>
 </node>
 </node>
-<node TEXT="规划最优动作序列" ID="ID_1116885467" CREATED="1599706387013" MODIFIED="1599706545410"><richcontent TYPE="NOTE">
+<node TEXT="规划最优动作序列" FOLDED="true" ID="ID_1116885467" CREATED="1599706387013" MODIFIED="1599706545410"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -830,7 +842,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="策略优化方法(policy improvement)" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599727659397">
 <node TEXT="过程" ID="ID_494782838" CREATED="1599727665269" MODIFIED="1599727675342">
@@ -853,10 +864,9 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="\latex $\pi^{&apos;}(s) = {argmax} \limits_{a} \sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$" ID="ID_635626764" CREATED="1599728339765" MODIFIED="1599729452879" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
+<node TEXT="\latex $\pi^{&apos;}(s) = {\arg\max} \limits_{a} \sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$" ID="ID_635626764" CREATED="1599728339765" MODIFIED="1599787705160" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -880,9 +890,8 @@
     </ol>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="\latex ${argmax} \limits_{a}$通过采用最大值的action来获取新策略" ID="ID_1354221253" CREATED="1599729229993" MODIFIED="1599729298161"/>
+<node TEXT="\latex ${\arg\max} \limits_{a}$通过采用最大值的action来获取新策略" ID="ID_1354221253" CREATED="1599729229993" MODIFIED="1599787693108"/>
 <node TEXT="\latex $\sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$ 对每个动作，计算所有可能的下一个状态的奖励和状态值的加权和" ID="ID_799940191" CREATED="1599729321979" MODIFIED="1599729434700"/>
 </node>
 </node>
