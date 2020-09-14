@@ -252,7 +252,7 @@
 </node>
 <node TEXT="chapter3" POSITION="left" ID="ID_1228608981" CREATED="1599372507484" MODIFIED="1599372512892">
 <edge COLOR="#0000ff"/>
-<node TEXT="智能体决策的目标" FOLDED="true" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
+<node TEXT="智能体决策的目标" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
 <node TEXT="期望回报(return)最大化" ID="ID_902241639" CREATED="1599374485466" MODIFIED="1599618263134"><richcontent TYPE="NOTE">
 
 <html>
@@ -764,7 +764,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="\latex $v_{k+1}(s) = \sum \limits_{a} \pi(a|s) \sum \limits_ {s^{&apos;},r} p(s^{&apos;},r,|s,a)[r + \gamma v_{k}(s^{&apos;})]$" ID="ID_1422984821" CREATED="1599707420640" MODIFIED="1599729447230" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
@@ -859,7 +858,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="策略优化方法(policy improvement)" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599927343586">
+<node TEXT="策略优化方法(policy improvement)" FOLDED="true" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599927343586">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1699822470" STARTINCLINATION="188;0;" ENDINCLINATION="203;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <node TEXT="过程" ID="ID_494782838" CREATED="1599727665269" MODIFIED="1599727675342">
 <node TEXT="利用状态值函数和MDP计算计算动作值函数" ID="ID_1199575247" CREATED="1599727679741" MODIFIED="1599727720915">
@@ -942,7 +941,6 @@
     </ol>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
