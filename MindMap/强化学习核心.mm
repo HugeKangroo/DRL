@@ -1,8 +1,8 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="强化学习" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599980949584" STYLE="oval">
+<node TEXT="强化学习核心" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599394201366" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.41">
+<hook NAME="MapStyle" zoom="0.795">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="false" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -66,7 +66,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="7" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="chapter2" POSITION="right" ID="ID_689009898" CREATED="1599292904652" MODIFIED="1599394201365">
 <edge COLOR="#ff0000"/>
-<node TEXT="环境" FOLDED="true" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
+<node TEXT="环境" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
 <node TEXT="\latex $\mathcal{MDP(S,A,T,R,S_\theta,\gamma,H)}$" ID="ID_995816260" CREATED="1599292926252" MODIFIED="1599369640397">
 <node TEXT="\latex $S$ 状态" ID="ID_1703633519" CREATED="1599293058037" MODIFIED="1599371739566"><richcontent TYPE="NOTE">
 
@@ -108,7 +108,7 @@
 <node TEXT="" ID="ID_1279325443" CREATED="1599293389212" MODIFIED="1599293389213">
 <hook NAME="FirstGroupNode"/>
 </node>
-<node TEXT="\latex \mathcal{T} 状态转移函数" ID="ID_1690957316" CREATED="1599293129053" MODIFIED="1599378607041"><richcontent TYPE="NOTE">
+<node TEXT="\latex \mathcal{T} 状态转移函数" ID="ID_1690957316" CREATED="1599293129053" MODIFIED="1601456808037" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -130,7 +130,7 @@
 <node TEXT="\latex $\sum \limits _{s&apos;\in S} p(s^&apos;|s,a) = 1, \forall s \in S, \forall a \in A(s)$" ID="ID_701923670" CREATED="1599378720510" MODIFIED="1599379008863"/>
 </node>
 </node>
-<node TEXT="\latex \mathcal{R} 奖励信号" ID="ID_471590239" CREATED="1599293144717" MODIFIED="1599372463436"><richcontent TYPE="NOTE">
+<node TEXT="\latex \mathcal{R} 奖励信号" ID="ID_471590239" CREATED="1599293144717" MODIFIED="1601456808031" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -240,9 +240,40 @@
 </node>
 <node TEXT="chapter4" POSITION="right" ID="ID_144543183" CREATED="1600047652158" MODIFIED="1600047656509">
 <edge COLOR="#00ffff"/>
-<node TEXT="探索和利用(exploration and exploitation)" ID="ID_224884469" CREATED="1600047657990" MODIFIED="1600047721949"/>
+<node TEXT="探索和利用(exploration and exploitation)" ID="ID_224884469" CREATED="1600047657990" MODIFIED="1600047721949">
+<node TEXT="目标" ID="ID_803464597" CREATED="1601450839800" MODIFIED="1601450845970">
+<node TEXT="悔过方程" ID="ID_850067421" CREATED="1601447250153" MODIFIED="1601456055164"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      比较了当前动作轨迹和最优动作之前的差，反映了当前动作的好坏。
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="\latex $\tau = \sum \limits^{E}_{e=1}[v_{*} - q_{*}(A_{e})]$" FOLDED="true" ID="ID_1563541489" CREATED="1601447468635" MODIFIED="1601449514353" BACKGROUND_COLOR="#ff0000">
+<node TEXT="\latex $v_*$ 表示了最优状态值" ID="ID_1106280768" CREATED="1601449125067" MODIFIED="1601449162724"/>
+<node TEXT="\latex $q_*(A_e)$表示了实际动作轨迹e，在最优动作值函数下的的动作值。" ID="ID_971702894" CREATED="1601449164299" MODIFIED="1601449361431"/>
 </node>
-<node TEXT="chapter1" POSITION="left" ID="ID_1125936534" CREATED="1600047749712" MODIFIED="1600047754949">
+<node TEXT="对比优势函数" ID="ID_389485646" CREATED="1601447685598" MODIFIED="1601448459058">
+<node TEXT="\latex $a_{\pi}(s,a) = q_\pi(s,a)-v_\pi(s)$" ID="ID_526225320" CREATED="1601447691758" MODIFIED="1601447721762"/>
+</node>
+</node>
+<node TEXT="最大化奖励期望函数" ID="ID_444656603" CREATED="1601452606680" MODIFIED="1601452623753"/>
+</node>
+<node TEXT="MAB解决办法" ID="ID_438456958" CREATED="1601451240813" MODIFIED="1601451258467">
+<node TEXT="随机探索策略" ID="ID_1329342748" CREATED="1601449492675" MODIFIED="1601449823949"/>
+<node TEXT="乐观探索策略" ID="ID_317884566" CREATED="1601449824147" MODIFIED="1601449953278"/>
+<node TEXT="信息状态空间探索策略" ID="ID_787362241" CREATED="1601451223533" MODIFIED="1601451236536"/>
+</node>
+</node>
+</node>
+<node TEXT="chapter1" FOLDED="true" POSITION="left" ID="ID_1125936534" CREATED="1600047749712" MODIFIED="1600047754949">
 <edge COLOR="#7c0000"/>
 <node TEXT="从反馈中学习" ID="ID_342820960" CREATED="1600047774504" MODIFIED="1600047780673">
 <node TEXT="顺序(sequential) vs. oneshot" ID="ID_1500119820" CREATED="1600047784496" MODIFIED="1600047860598"/>
@@ -252,7 +283,7 @@
 </node>
 <node TEXT="chapter3" POSITION="left" ID="ID_1228608981" CREATED="1599372507484" MODIFIED="1599372512892">
 <edge COLOR="#0000ff"/>
-<node TEXT="智能体决策的目标" FOLDED="true" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
+<node TEXT="智能体决策的目标" ID="ID_1244366833" CREATED="1599374230432" MODIFIED="1599374783603">
 <node TEXT="期望回报(return)最大化" ID="ID_902241639" CREATED="1599374485466" MODIFIED="1599618263134"><richcontent TYPE="NOTE">
 
 <html>
@@ -479,12 +510,12 @@
 <node TEXT="策略可以是确定的（deterministic）" FOLDED="true" ID="ID_1399799549" CREATED="1599619054479" MODIFIED="1599619082746">
 <node TEXT="直接生成行动（action）" ID="ID_320171718" CREATED="1599619095232" MODIFIED="1599619120865"/>
 </node>
-<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1599925238196" BACKGROUND_COLOR="#00ffff">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1789584920" MIDDLE_LABEL="依靠" STARTINCLINATION="43;0;" ENDINCLINATION="43;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<node TEXT="如何衡量策略的好坏" ID="ID_1324492397" CREATED="1599619591798" MODIFIED="1600047772091" BACKGROUND_COLOR="#00ffff">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1789584920" STARTINCLINATION="43;0;" ENDINCLINATION="43;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
-<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1599925230407" BACKGROUND_COLOR="#ff0000">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_935275475" MIDDLE_LABEL="求解" STARTINCLINATION="72;0;" ENDINCLINATION="72;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<node TEXT="多种值函数(value function)" LOCALIZED_STYLE_REF="styles.important" ID="ID_1789584920" CREATED="1599618495898" MODIFIED="1600047772091" BACKGROUND_COLOR="#ff0000">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_935275475" STARTINCLINATION="72;0;" ENDINCLINATION="72;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <richcontent TYPE="NOTE">
 
 <html>
@@ -586,7 +617,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="\latex $a_{\pi}(s,a) = q_\pi(s,a)-v_\pi(s)$" ID="ID_1414076740" CREATED="1599636973787" MODIFIED="1599637015816">
+<node TEXT="\latex $a_{\pi}(s,a) = q_\pi(s,a)-v_\pi(s)$" FOLDED="true" ID="ID_1414076740" CREATED="1599636973787" MODIFIED="1599637015816">
 <node TEXT="advantage function" ID="ID_614973777" CREATED="1599637641085" MODIFIED="1599637646922"/>
 <node TEXT="action-advantage function" ID="ID_682782530" CREATED="1599637675136" MODIFIED="1599637685066"/>
 <node TEXT="A-function" ID="ID_1152795936" CREATED="1599637708863" MODIFIED="1599637711420"/>
@@ -640,7 +671,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="最优状态值函数" ID="ID_707030922" CREATED="1599638629151" MODIFIED="1599642267755"><richcontent TYPE="NOTE">
+<node TEXT="最优状态值函数" ID="ID_707030922" CREATED="1599638629151" MODIFIED="1601447205516"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -648,16 +679,17 @@
   </head>
   <body>
     <p>
-      某个状态值函数在每个策略中的所有状态下都取得最大值。
+      每个状态值函数在每个策略中的所有状态下都取得最大值。
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="\latex $v_{*}(s) = \max \limits _{\pi} v_{\pi}(s),\forall s \in S$" ID="ID_1378173471" CREATED="1599640465131" MODIFIED="1599661136240">
 <node TEXT="\latex $v_{*}(s) = \max \limits_{a} \sum_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r+\gamma v_{*}(s^{&apos;})]$" ID="ID_903440002" CREATED="1599640971446" MODIFIED="1599661173890"/>
 </node>
 </node>
-<node TEXT="最优动作值函数" ID="ID_1219848076" CREATED="1599638639360" MODIFIED="1599639880563"><richcontent TYPE="NOTE">
+<node TEXT="最优动作值函数" ID="ID_1219848076" CREATED="1599638639360" MODIFIED="1601447211207"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -665,10 +697,11 @@
   </head>
   <body>
     <p>
-      某个动作值函数在所有策略的所有[状态，动作]对中都有最大值
+      每个动作值函数在所有策略的所有[状态，动作]对中都有最大值
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="\latex $q_{*}(s,a) = \max \limits_{\pi} q_{\pi}(s,a),\forall s \in S, \forall a \in A(s)$" ID="ID_100111224" CREATED="1599640740876" MODIFIED="1599661160635">
 <node TEXT="\latex $q_{*}(s,a) = \sum_{s^{&apos;},r} p(s^{&apos;},r|s,a)[r+\gamma \max \limits_{a^{&apos;}}q_{*}(s^{&apos;},a^{&apos;})]$" ID="ID_860491119" CREATED="1599640980183" MODIFIED="1599661185570"/>
@@ -692,7 +725,7 @@
 </node>
 </node>
 </node>
-<node TEXT="如何评估和优化策略" ID="ID_1116885467" CREATED="1599706387013" MODIFIED="1599925833846"><richcontent TYPE="NOTE">
+<node TEXT="规划最优动作序列" ID="ID_1116885467" CREATED="1599706387013" MODIFIED="1599706545410"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -728,9 +761,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="迭代策略评估方法(iterative policy evalution)" FOLDED="true" ID="ID_1451018919" CREATED="1599706862714" MODIFIED="1599927311602">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_582872261" STARTINCLINATION="239;0;" ENDINCLINATION="239;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-<richcontent TYPE="NOTE">
+<node TEXT="迭代策略评估方法(iterative policy evalution)" ID="ID_1451018919" CREATED="1599706862714" MODIFIED="1599727627258"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -743,29 +774,15 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="过程" FOLDED="true" ID="ID_512610733" CREATED="1599708943703" MODIFIED="1599708946348">
+<node TEXT="过程" ID="ID_512610733" CREATED="1599708943703" MODIFIED="1599708946348">
 <node TEXT="" ID="ID_41771409" CREATED="1599707219328" MODIFIED="1599707219329">
 <hook NAME="FirstGroupNode"/>
 </node>
-<node TEXT="通过遍历所有的状态，计算给定策略的V函数" ID="ID_1526648067" CREATED="1599707061811" MODIFIED="1599927001725">
+<node TEXT="通过扫荡所有的状态，计算给定策略的V函数" ID="ID_1526648067" CREATED="1599707061811" MODIFIED="1599707176053">
 <icon BUILTIN="full-1"/>
 </node>
-<node TEXT="迭代的优化估计" ID="ID_1146417755" CREATED="1599707099685" MODIFIED="1599927027339">
+<node TEXT="迭代的优化估计" ID="ID_1146417755" CREATED="1599707099685" MODIFIED="1599707137145">
 <icon BUILTIN="full-2"/>
-<richcontent TYPE="NOTE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      直到状态值收敛
-    </p>
-  </body>
-</html>
-
-</richcontent>
 </node>
 <node TEXT="\latex $v_{k+1}(s) = \sum \limits_{a} \pi(a|s) \sum \limits_ {s^{&apos;},r} p(s^{&apos;},r,|s,a)[r + \gamma v_{k}(s^{&apos;})]$" ID="ID_1422984821" CREATED="1599707420640" MODIFIED="1599729447230" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
@@ -859,8 +876,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="策略优化方法(policy improvement)" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599927343586">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1699822470" STARTINCLINATION="188;0;" ENDINCLINATION="203;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<node TEXT="策略优化方法(policy improvement)" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599727659397">
 <node TEXT="过程" ID="ID_494782838" CREATED="1599727665269" MODIFIED="1599727675342">
 <node TEXT="利用状态值函数和MDP计算计算动作值函数" ID="ID_1199575247" CREATED="1599727679741" MODIFIED="1599727720915">
 <icon BUILTIN="full-1"/>
@@ -912,38 +928,6 @@
 <node TEXT="\latex $\sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$ 对每个动作，计算所有可能的下一个状态的奖励和状态值的加权和" ID="ID_799940191" CREATED="1599729321979" MODIFIED="1599729434700"/>
 </node>
 </node>
-</node>
-</node>
-<node TEXT="策略迭代(policy iteration)" ID="ID_764631921" CREATED="1599926035322" MODIFIED="1599926050292">
-<node TEXT="迭代策略估计" ID="ID_582872261" CREATED="1599927263093" MODIFIED="1599927277471"/>
-<node TEXT="策略优化" ID="ID_1699822470" CREATED="1599927278037" MODIFIED="1599927286438"/>
-</node>
-<node TEXT="值迭代(value iteration)" ID="ID_1302412809" CREATED="1599926051793" MODIFIED="1599926063957">
-<node TEXT="\latex $v_{k+1}(s) = \max \limits_{a} \sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_k(s^{&apos;})]$" ID="ID_1091816358" CREATED="1599927322740" MODIFIED="1599982494831" COLOR="#ff0000"><richcontent TYPE="NOTE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      值迭代方法没有等到一个准确的策略估计，而是在策略估计进行一次评估时直接优化策略。
-    </p>
-    <p>
-      <font color="#ff0033">是一种贪婪的贪婪策略 </font>
-    </p>
-    <ol>
-      <li>
-        策略估计的一次状态空间遍历（循环只走一次）
-      </li>
-      <li>
-        Q-function评估的贪婪策略
-      </li>
-    </ol>
-  </body>
-</html>
-
-</richcontent>
 </node>
 </node>
 </node>
