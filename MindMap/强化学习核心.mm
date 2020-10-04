@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="强化学习" FOLDED="false" ID="ID_368509782" CREATED="1599292892310" MODIFIED="1599980949584" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.41">
+<hook NAME="MapStyle" zoom="0.552">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_notes_in_map="false" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -66,7 +66,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="7" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="chapter2" POSITION="right" ID="ID_689009898" CREATED="1599292904652" MODIFIED="1599394201365">
 <edge COLOR="#ff0000"/>
-<node TEXT="环境" FOLDED="true" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
+<node TEXT="环境" ID="ID_704789405" CREATED="1599292938188" MODIFIED="1599372504923">
 <node TEXT="\latex $\mathcal{MDP(S,A,T,R,S_\theta,\gamma,H)}$" ID="ID_995816260" CREATED="1599292926252" MODIFIED="1599369640397">
 <node TEXT="\latex $S$ 状态" ID="ID_1703633519" CREATED="1599293058037" MODIFIED="1599371739566"><richcontent TYPE="NOTE">
 
@@ -860,7 +860,7 @@
 </richcontent>
 <node TEXT="策略优化方法(policy improvement)" FOLDED="true" ID="ID_1893813849" CREATED="1599723703756" MODIFIED="1599927343586">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1699822470" STARTINCLINATION="188;0;" ENDINCLINATION="203;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-<node TEXT="过程" ID="ID_494782838" CREATED="1599727665269" MODIFIED="1599727675342">
+<node TEXT="过程" FOLDED="true" ID="ID_494782838" CREATED="1599727665269" MODIFIED="1599727675342">
 <node TEXT="利用状态值函数和MDP计算计算动作值函数" ID="ID_1199575247" CREATED="1599727679741" MODIFIED="1599727720915">
 <icon BUILTIN="full-1"/>
 </node>
@@ -882,7 +882,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="\latex $\pi^{&apos;}(s) = {\arg\max} \limits_{a} \sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$" ID="ID_635626764" CREATED="1599728339765" MODIFIED="1599787705160" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
+<node TEXT="\latex $\pi^{&apos;}(s) = {\arg\max} \limits_{a} \sum \limits_{s^{&apos;},r}p(s^{&apos;},r|s,a)[r + \gamma v_{\pi}(s^{&apos;})]$" FOLDED="true" ID="ID_635626764" CREATED="1599728339765" MODIFIED="1599787705160" BACKGROUND_COLOR="#ff0000"><richcontent TYPE="NOTE">
 
 <html>
   <head>
