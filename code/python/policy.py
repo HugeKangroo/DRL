@@ -8,7 +8,7 @@ FilePath: /DRL/code/python/policy.py
 '''
 import numpy as np 
 
-#pseudocode
+#pseudocode 
 def policyEval(pi,MDP,gamma=1,tol=1e-10):
     #确定性策略
     #pi --> pi[state] --> action
